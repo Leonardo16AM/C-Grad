@@ -1,18 +1,20 @@
 #include "value.h"
 #include <iostream>
 #include <cuda_runtime.h>
-
+using namespace std;
 
 int main() {
-    // Crear un objeto value en el host
+    
     value a(10.0);
     value b(20.0);
-
     value d=a+b;
 
-    d.backpropagate();
+    value c=30;
+    value e=d*c;
 
-    d.print();
+    e.backpropagate();
+
+    e.print();
 
 
 
